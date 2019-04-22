@@ -1,0 +1,40 @@
+template<N,B,T>
+class Number {...} ===> Number<10,2,char>    Number<10,10,char>  ... Number<5,16,int>
+
+
+class Number_base {
+    private:
+        int base;
+        int tamanio_array;
+
+    Number_base(int N,int B)
+    virtual void to_base()=0
+    virtual ostream& write(ostream&) const
+    virtual Number_base* operator+(const Number_base& n) const
+    virtual Number_base* duplicate()=0
+    
+};
+
+Number(int val): Number_base(int B, int N)
+{...}
+
+void to_base()
+ostream& write(ostream&) const
+
+--------------------------------
+Number_base* duplicate(/*c*/) { //crea una copia del objeto del mismo tipo del objeto que le esta ejecutando en memoria dinamica(guardar resultado)
+    return new Number<N,B,T>(*this/*c*/); //contructor de copia de si mismo o tambien le podemos pasar un objeto(el que queremos copiar)
+}
+
+template<N,B,T>
+clas Number...
+
+Number<N,B,T>* r=duplicate();
+r=(*this)+s
+return *r;
+-----------------------------------------------------------
+Number_base<N,B,T>& s= dinamic_cast<cast Number<N,B,T>&> (n)
+
+Number<N,B,T> operator+(const number<N,B,T>&) const       
+              operator-
+-------------------------------------------------------------

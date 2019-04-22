@@ -1,0 +1,64 @@
+metodos de ordenacion
+
+template<class T>
+void seleccion(T* v, int N);
+
+2 PROGRAMA PRINCIPAL
+
+Modo estadistica:
+
+    contador en la clave
+
+Modo demostracion:
+
+    elegir en cada metodo el bucle que domina y al final de cada bucle detener el codigo y mostrar
+    la traza, luego tocar una tecla y que se siga ejecutando paso a paso
+
+    como hacerlo sin tener dos versiones del mismo metodo:
+
+        directivas de bucle de compilacion, si nosotros compilamos incluyendo la definicion del simbolo
+        ejecutamos ese codigo de demostracion y si no esta activo ese simbolo ejecutar modo estadistico 
+        con un if(..)
+
+    void seleccion(T* v, int N) {
+
+            .............
+
+            #ifdef DEMOSTRACION
+
+                //ver estado...
+
+                //detener el programa con un cin >> demostrary
+
+            #endif
+
+    }
+
+    al compilar -> g++ -D DEMOSTRACION ......., si no se compila con estas lineas no entra en modo demostracion
+
+
+uso de clave
+
+    T=dni;
+
+    operator=()
+
+    le mando un programa sort al main, dos sort distinto, uno de demostracion y a un sort le oasi
+    el tamaño y el metodo se ordenacion(con un numero) y el numero de pruebas que queremos realizar, semilla y alfa
+    y si queremos probarlos con todos los metodos hacemos un script
+
+
+    clase abstracta al que solo le pasamos el vector y el entero -> con un puntero igual que en fdispersion
+
+    el switch lo vamos a meter como un metodo en la clase abstracta que tiene un metodo nulo sort
+    y otro create, le pasamos el entero y dentro esta el switch y devolvemos un puntero a objetos de la clase base
+    y el resultado es el objeto instanciado de la clase adecuada
+
+    con esto no tocamos el programa PRINCIPAL
+    
+
+
+
+
+    //LINEA DE CINABDIS SIRT N METIDO NPRUEBAS SEMILLA ALFA
+
